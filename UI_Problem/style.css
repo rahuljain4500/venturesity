@@ -1,0 +1,15 @@
+.outerDiv
+{
+   width: 100%;
+   display: block;
+   position: relative;
+   margin: 20px0;
+}
+.innerDiv
+{
+   display: block;
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   background-color: red;
+}

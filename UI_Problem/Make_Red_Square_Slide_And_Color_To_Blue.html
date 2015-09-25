@@ -1,0 +1,39 @@
+<html>
+<head>
+<script src="jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+Click on the below square to make it slide, left to right and right to left:
+<br/><br/>
+   <div class="outerDiv">
+      <div id="hi" class="innerDiv"></div>
+   </div>
+<script>
+$('.innerDiv').click(function(){
+	if($(this).offset().left==8){
+		$('.innerDiv').animate({
+			 left: "92%"
+		  },
+		  'slow'
+	   );
+	}
+});
+$('.innerDiv').click(function(){
+	if($(this).offset().left>8){
+		$('.innerDiv').animate({
+			left: "0%"
+			},
+			'slow'
+		);
+	}
+});
+$('.innerDiv').mouseover(function(){
+	$('.innerDiv')
+    .css('background-color', '')
+    .css('background-color', 'blue');
+}
+);
+</script>
+</body>
+</html>
