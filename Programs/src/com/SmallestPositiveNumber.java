@@ -2,6 +2,7 @@ package com;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /*
  * @author Rahul Jain
@@ -16,10 +17,19 @@ public class SmallestPositiveNumber {
 	public static void main(String[] args) {
 		SmallestPositiveNumber obj = new SmallestPositiveNumber();
 		List<Integer> intList = new ArrayList<Integer>();
-		intList.add(10);
-		intList.add(8);
-		intList.add(2);
-		intList.add(3);
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Please enter the total number of number(s) in the array ");
+		int totalNum = scanner.nextInt();
+		if(totalNum < 1){
+			System.out.println("Exiting as no number to be processed");
+			System.exit(0);
+		}
+		for(int i = 0; i < totalNum; i++){
+			System.out.println(i+1+".Enter the number: ");
+			intList.add(scanner.nextInt());
+		}
+		scanner.close();
+		
 		System.out.println("Smallest Number:: "+obj.smallestPositiveNumber(intList,""));
 	}
 	
